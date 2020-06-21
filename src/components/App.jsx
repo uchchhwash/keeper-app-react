@@ -17,7 +17,7 @@ function App() {
         <div>
             <Header />
             <CreateArea addNote={insertNote} />
-            {noteList.map((note) => <Note key={1} title={note.title} content={note.content} />)}
+            {noteList.map((note, index) => <Note key={index} title={note.title} content={note.content} />)}
           
             <Footer />
         </div>
