@@ -1,5 +1,5 @@
 {
-    "homepage": "http://uchchhwash.github.io/keeper-app-react",
+    "homepage": "https://uchchhwash.github.io/keeper-app-react/",
     "name": "keeper-app-react",
     "version": "1.0.0",
     "keywords": [],
@@ -17,7 +17,7 @@
     },
     "scripts": {
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d build",
+        "deploy": "gh-pages -b deploy-branch -d build",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "eject": "react-scripts eject"
