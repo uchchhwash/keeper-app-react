@@ -13,12 +13,20 @@ function App() {
         })
     }
 
+    function deleteNote(dNote){
+        addNotelist((prevList) => {
+            return prevList.filter((prevItem, index) => {
+                return dNote !== index;
+            })
+        })
+
+    }
+
     return (
         <div>
             <Header />
             <CreateArea addNote={insertNote} />
-            {noteList.map((note, index) => <Note key={index} title={note.title} content={note.content} />)}
-          
+            {noteList.map((note, index) => <Note key={index} id={index} title={note.title} content={note.content} onDelete={deleteNote}/>)}
             <Footer />
         </div>
     );
